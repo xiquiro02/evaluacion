@@ -1,6 +1,7 @@
 export function calcularImpuestoUnitario(valor, porcentaje)
 {
-    let porcentajeFinal =  porcentaje * 100.0; 
-    let totalFinal = valor * porcentajeFinal;
-    return totalFinal;
+    // se inicaliza una variable y se le asigna la operación
+    let impuesto = valor * (porcentaje / 100);
+    // retorna el resultado de impuesto
+    return impuesto; 
 }

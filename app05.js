@@ -1,10 +1,25 @@
-import { buscarElemento } from "./Modulos/ejecicio05";
+import { buscarElemento } from "./Modulos/ejecicio05.js";
 
-    let lista = ["Hola", 1, "Chao", 5, 7, "Binevenido"];
-    let cantidad = prompt("Ingrese la cantidad de elementos: ");
+export function ejer05()
+{
+    let lista = [];
+    let cantidad = parseInt(prompt("Ingrese la cantidad de elementos: "));
 
     for(let i = 0; i < cantidad; i++)
     {
-        let elemento = prompt("Ingrese el elemnto a buscar: ");
-        buscarElemento(elemento, lista, cantidad);
+        let valor = prompt(`Ingrese el elemento para la lista ${i + 1}: `);
+        lista.push(valor);
     }
+
+    let elemento = prompt("Ingrese el elemento a buscar: ");
+    let encontrado = buscarElemento(lista, elemento);
+
+    if(encontrado)
+    {
+        alert(`El elemento "${elemento}" SÍ esta en la lista.`)
+    }
+    else
+    {
+        alert(`El elemento "${elemento}" NO esta en la lista.`);
+    }
+}

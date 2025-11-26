@@ -1,16 +1,18 @@
 export const generarTabla = (numero) => 
 {
+    // se incializa una variable llamada resultados y se le asigna un arreglo.
     let resultados = [];
-
-    for(let i = 1; i < numero; i++)
+    // Se utiliza un ciclo repetivivo para la el resultado de la multiplicación
+    for(let i = 1; i <= 10; i++)
     {
-        let resul = i * numero;
+        // se incializa una variable y se le asigna la opreción de la multiplicación 
+        let resul = i * numero; 
+        // se le agrega el resultado en el arreglo
         resultados.push(resul);
     }
-
-    for(i = 1; i < numero; i++)
+    // Se utiliza un ciclo repetivivo para imprimir el resultado de la multiplicación
+    for (let i = 0; i < 10; i++)
     {
-        alert(`${i} x ${numero} = ${resultados[i]}`);
+        alert(`Tabla de multiplicar: ${i + 1} x ${numero} = ${resultados[i]}`);
     }
-
 }

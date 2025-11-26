@@ -1,11 +1,11 @@
-export const buscarElemento = (elemento, lista, cantidad) =>
+export const buscarElemento = (lista, elemento) =>
 {
-    for (let i = 0; i < cantidad; i++)
+    for (let i = 0; i < lista.length; i++)
     {
-        if(elemento === lista)
+        if(lista[i] == elemento)
         {
             return true;
         }
     }
-
+    return false;
 }
